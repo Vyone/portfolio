@@ -2,7 +2,7 @@
   "name": "portofolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Vyone.github.io/Portfolio",
+  "homepage": "https://Vyone.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",

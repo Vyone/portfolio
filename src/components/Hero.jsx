@@ -11,7 +11,7 @@ export default function Hero() {
 
       <section
         id="home"
-        className="min-h-screen bg-gray-900 text-white scroll-mt-20 flex items-center"
+        className="min-h-screen bg-gray-900 text-white mt-10 md:scroll-mt-10 flex items-center"
         data-aos="fade-up"
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center">
@@ -52,14 +52,14 @@ export default function Hero() {
           </div>
         </div>
 
-         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:hidden">
+         {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:hidden">
           <a
             href="#about"
             className="inline-block animate-bounce text-blue-100 text-3xl"
           >
             <FiArrowDown />
           </a>
-        </div>
+        </div> */}
 
       </section>
     </>
