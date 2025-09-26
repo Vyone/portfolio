@@ -24,7 +24,8 @@ export default function Hero() {
             </p>
 
             <a
-              href="/CV-VyoneLouis.pdf"
+              // href="/CV-VyoneLouis.pdf"
+              href="/portfolio/CV-VyoneLouis.pdf"
               download="CV-VyoneLouis.pdf"
               className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 mx-auto md:mx-0 flex items-center justify-center gap-2"
               // className="bg-blue-200 hover:bg-blue-300 text-gray-900 font-semibold py-2 px-4 rounded-full 
