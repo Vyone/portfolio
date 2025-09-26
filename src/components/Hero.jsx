@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import profilePic from '../assets/profilee.jpeg';
 import { FiDownload, FiMail, FiArrowDown } from 'react-icons/fi';
-import { FaLinkedin, FaGithub} from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Hero() {
   return (
@@ -23,18 +23,43 @@ export default function Hero() {
               Computer Science student at BINUS University Alam Sutera, specializing in Software Engineering. Experienced in student organizations through IT division roles, supporting technical operations. Passionate about learning, exploring new technologies, and applying knowledge in both academic and organizational settings.
             </p>
 
-            <a
-              // href="/CV-VyoneLouis.pdf"
+            {/* Download */}
+            <div className="flex flex-col items-center md:flex-row md:items-start md:justify-start gap-4">
+              <a
+                href="/portfolio/CV-VyoneLouis.pdf"
+                download="CV-VyoneLouis.pdf"
+                className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 flex items-center justify-center gap-2"
+              >
+                <FiDownload className="w-4 h-4" />
+                Download CV
+              </a>
+
+              <a
+                href="/portfolio/Portfolio-VyoneLouis.pdf"
+                download="Portfolio-VyoneLouis.pdf"
+                className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-50 h-10 flex items-center justify-center gap-2"
+              >
+                <FiDownload className="w-4 h-4" />
+                Download Portfolio
+              </a>
+            </div>
+
+            {/* <a
               href="/portfolio/CV-VyoneLouis.pdf"
               download="CV-VyoneLouis.pdf"
               className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 mx-auto md:mx-0 flex items-center justify-center gap-2"
-              // className="bg-blue-200 hover:bg-blue-300 text-gray-900 font-semibold py-2 px-4 rounded-full 
-              //           transition duration-300 transform hover:scale-105 
-              //           flex items-center justify-center gap-2 text-sm w-40 h-10 mx-auto md:mx-0"
             >
               <FiDownload className="w-4 h-4" />
               Download CV
             </a>
+            <a
+              href="/portfolio/CV-VyoneLouis.pdf"
+              download="CV-VyoneLouis.pdf"
+              className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 mx-auto md:mx-0 flex items-center justify-center gap-2"
+            >
+              <FiDownload className="w-4 h-4" />
+              Download Portfolio
+            </a> */}
 
             <div className="justify-center md:justify-start flex gap-6 text-gray-400 text-3xl mt-6">
               <a href="mailto:vyone.louis@binus.ac.id"><FiMail /></a>
@@ -53,7 +78,7 @@ export default function Hero() {
           </div>
         </div>
 
-         {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:hidden">
+        {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:hidden">
           <a
             href="#about"
             className="inline-block animate-bounce text-blue-100 text-3xl"
