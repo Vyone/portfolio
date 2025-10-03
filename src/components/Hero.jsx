@@ -28,7 +28,7 @@ export default function Hero() {
               <a
                 href="/portfolio/CV-VyoneLouis.pdf"
                 download="CV-VyoneLouis.pdf"
-                className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 flex items-center justify-center gap-2"
+                className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-50 md:w-40 h-10 flex items-center justify-center gap-2"
               >
                 <FiDownload className="w-4 h-4" />
                 Download CV
@@ -59,11 +59,11 @@ export default function Hero() {
               className="w-50 h-50 md:w-100 md:h-100 rounded-full object-cover border-3 border-blue-100"
             />
           </div> */}
-          <div className="order-1 md:order-2 flex-1 flex justify-center md:justify-end items-start md:pl-10">
+          <div className="order-1 md:order-2 flex-1 flex justify-center md:justify-end items-start mt-10 md:mt-0 md:pl-10">
             <img
               src={profilePic}
               alt="Profile"
-              className="w-50 h-50 md:w-120 md:h-120 rounded-full object-cover border-5 border-blue-100"
+              className="w-50 h-50 md:w-120 md:h-120 rounded-full object-cover border-4 border-blue-900 ring-5 ring-blue-100"
             />
           </div>
         </div>

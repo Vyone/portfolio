@@ -57,7 +57,7 @@ const project = [
      "Built the frontend for a Deepfake Detection website, integrating an AI model (Python) with a responsive HTML/CSS interface.",
    pictures: [fHome, fReal, fFake],
    skills: ["HTML", "CSS", "Python", "AI Integration"],
-   github: "https://github.com/Vyone/Faketection",
+   github: "https://drive.google.com/file/d/10VoFhAXgXTv1oxySUuIXmsjNTj8bqKUg/view?usp=sharing",
  },
   {
     name: "Social Event 2024",
