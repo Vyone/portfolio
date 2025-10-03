@@ -4,9 +4,9 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Hero from './components/Hero';
 import About from './components/About';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
 import Project from './components/Project';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 function App() {
@@ -17,9 +17,9 @@ function App() {
   <main className="bg-gray-900 min-h-screen">
     <Hero />
     <About />
+    <Project />
     <Skills />
     <Experience />
-    <Project />
     <Contact />
     <Footer />
   </main>

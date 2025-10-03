@@ -15,22 +15,20 @@ import skinHome from "../assets/project/SkinVigil-Home.png";
 import skinAbout from "../assets/project/SkinVigil-About.png";
 import willifyHome from "../assets/project/Willify-Home.png";
 import willifySong from "../assets/project/Willify-SongDetail.png";
-import willifyLR from "../assets/project/Willify-LR.png"; 
+import willifyLR from "../assets/project/Willify-LR.png";
 import willifyLogin from "../assets/project/Willify-Login.png";
 import pawpal from "../assets/project/PawPal.png";
 import portHero from "../assets/project/porto-hero.png";
 import portProject from "../assets/project/porto-project.png";
 import portExp from "../assets/project/porto-exp.png";
 
-
-// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 const project = [
   {
     name: "Willify",
     description:
-      "Developed a website where users can browse and select songs, view lyrics and detailed song information, and create personalized accounts through login and registration features using HTML, CSS, and JavaScript. Built with a focus on user experience, and dynamic content display.",
+      "Developed a website where users can browse and select songs, view lyrics and detailed song information, and create personalized accounts through login and registration features using HTML, CSS, and JavaScript.",
     pictures: [willifyLR, willifyHome, willifyLogin, willifySong],
     skills: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Vyone/Willify",
@@ -38,7 +36,7 @@ const project = [
   {
     name: "Restawrant",
     description:
-      "Developed a food ordering website using Vue.js, where users can browse foods, view recommendations, and add items to their cart with the total price automatically calculated. The project uses a local JSON file (via json-server) as a mock database and API for efficient data management and retrieval.",
+      "Developed a food ordering website using Vue.js, where users can browse foods, view recommendations, and add items to their cart with the total price automatically calculated.",
     pictures: [restoHome, restoOrder, restoCart],
     skills: ["Vue.js", "Bootstrap", "JSON", "Local API", "JavaScript"],
     github: "https://github.com/Vyone/Restawrant",
@@ -46,49 +44,50 @@ const project = [
   {
     name: "National English Olympics 2024",
     description:
-      "Contributed to The National English Olympics (https://neo.mybnec.org/), an annual national-level English competition organized by BINUS English Club (BNEC) Alam Sutera, by designing and developing the competition section.",
+      "Contributed to The National English Olympics (https://neo.mybnec.org/) by designing and developing the competition section.",
     pictures: [neoHome, neoComp, neoCompDetail],
-    skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Git", "Github", "Figma", "Teamwork"],
+    skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap"],
     github: "https://neo.mybnec.org/",
   },
   {
-   name: "Faketection",
-   description:
-     "Built the frontend for a Deepfake Detection website, integrating an AI model (Python) with a responsive HTML/CSS interface.",
-   pictures: [fHome, fReal, fFake],
-   skills: ["HTML", "CSS", "Python", "AI Integration"],
-   github: "https://drive.google.com/file/d/10VoFhAXgXTv1oxySUuIXmsjNTj8bqKUg/view?usp=sharing",
- },
+    name: "Faketection",
+    description:
+      "Built the frontend for a Deepfake Detection website, integrating an AI model (Python) with a responsive HTML/CSS interface.",
+    pictures: [fHome, fReal, fFake],
+    skills: ["HTML", "CSS", "Python", "AI Integration"],
+    github:
+      "https://drive.google.com/file/d/10VoFhAXgXTv1oxySUuIXmsjNTj8bqKUg/view?usp=sharing",
+  },
   {
     name: "Social Event 2024",
     description:
       "Coordinated, designed, and developed a Social Event Website with a team using Laravel (PHP) and Blade templating.",
     pictures: [seLanding, seAbout, seEvent],
-    skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Git", "Github", "Figma", "Teamwork"],
+    skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap"],
     github: "",
   },
-   {
+  {
     name: "SkinVigil",
     description:
-      "Collaborated in a group project to develop a Skin Cancer Detection website, contributing to the design and implementation of the “About Us” section.",
+      "Collaborated in a group project to develop a Skin Cancer Detection website, contributing  to the design and implementation of the “About Us” section. Focused on building a responsive and user-friendly interface using React to enhance the overall frontend experience.",
     pictures: [skinHome, skinAbout],
     skills: ["React", "Git", "Github", "Figma", "Teamwork"],
     github: "https://skin-vigil-frontend.vercel.app/",
   },
-{
+  {
     name: "PawPal",
     description:
-      "Designed a pet tracker mobile app prototype using Figma, featuring care reminders, multi-pet management, a community forum, and clinic recommendations.",
+      "Designed a pet tracker mobile app prototype using Figma.",
     pictures: [pawpal],
     skills: ["Figma", "UI/UX Design", "Prototyping"],
     github: "",
   },
-   {
+  {
     name: "Portfolio Website",
     description:
-    "Developed a personal portfolio website using React and Tailwind CSS to create a modern, responsive, and visually appealing interface. The website includes dedicated sections for About Me, Skills, Projects, Experience, and Contact, providing a structured and professional presentation of my background.",
+      "Developed a personal portfolio website using React and Tailwind CSS.",
     pictures: [portHero, portProject, portExp],
-    skills: ["React.js", "Tailwind CSS", "JavaScript", "Git", "Github", "Deployment"],
+    skills: ["React.js", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Vyone/portfolio",
   },
 ];
@@ -96,6 +95,7 @@ const project = [
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null); 
 
   const handleOpen = (proj) => {
     setSelectedProject(proj);
@@ -105,6 +105,7 @@ export default function Project() {
   const handleClose = () => {
     setSelectedProject(null);
     setCurrentIndex(0);
+    setActiveIndex(null); 
   };
 
   const prevImage = () => {
@@ -144,42 +145,58 @@ export default function Project() {
         {project.map((exp, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-150 hover:scale-[1.03] hover:shadow-2xl"
+            className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-150"
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
-            <div className="relative group">
+            <div
+              className="relative group cursor-pointer"
+              onClick={() => {
+                // On mobile: tap to activate overlay
+                setActiveIndex(activeIndex === index ? null : index);
+              }}
+            >
               <img
                 src={exp.pictures[0]}
                 alt={exp.name}
-                className="w-full h-60 object-cover transition duration-150 group-hover:blur-sm"
+                className={`w-full h-60 object-cover transition duration-150 
+                  ${activeIndex === index ? "blur-sm md:blur-none" : ""} 
+                  md:group-hover:blur-sm`}
               />
-              <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                <button
-                  onClick={() => handleOpen(exp)}
-                  className="text-blue-900 text-sm md:text-base font-semibold px-4 py-2 border-2 border-blue-900 rounded-lg bg-white/80 hover:bg-white transition"
-                >
-                  View Project
-                </button>
-                {exp.github ? (
-                  <a
-                    href={exp.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-gray-700/80 text-white hover:bg-gray-600 transition"
+
+              <div
+                className={`absolute inset-0 flex items-center justify-center gap-4 transition 
+                  md:opacity-0 md:group-hover:opacity-100
+                  ${activeIndex === index ? "opacity-100" : "opacity-0"}`}
+              >
+                <div className="flex gap-3 items-center">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOpen(exp);
+                    }}
+                    className="text-blue-900 text-sm md:text-base font-semibold px-4 py-2 border-2 border-blue-900 rounded-lg bg-white/30 hover:bg-blue-200 transition"
                   >
-                    <FaGithub className="text-lg" />
-                    {/* GitHub */}
-                  </a>
-                ) : (
-                  <span className="relative inline-flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-gray-700/50 text-gray-400 cursor-not-allowed">
-                    <FaGithub className="text-lg opacity-50" />
-                    <span className="absolute left-3 w-5 h-[2px] bg-red-400 rotate-45"></span>
-                    {/* Not Available */}
-                  </span>
+                    View Project
+                  </button>
 
-
-                )}
+                  {exp.github ? (
+                    <a
+                      href={exp.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center justify-center h-[42px] w-[42px] rounded-full bg-gray-700/80 text-white hover:bg-blue-900 transition"
+                    >
+                      <FaGithub className="text-lg" />
+                    </a>
+                  ) : (
+                    <span className="relative flex items-center justify-center h-[42px] w-[42px] rounded-full bg-gray-700/50 text-gray-400 cursor-not-allowed">
+                      <FaGithub className="text-lg opacity-50" />
+                      <span className="absolute w-5 h-[2px] bg-red-400 rotate-45"></span>
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
 

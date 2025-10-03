@@ -8,9 +8,9 @@ export default function Navbar() {
   const NavbarLink = [
     // { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
+    { name: "Project", link: "#project" },
     { name: "Skills", link: "#skills" },
     { name: "Experience", link: "#experience" },
-    { name: "Project", link: "#project" },
     { name: "Contact", link: "#contact" },
   ];
 
