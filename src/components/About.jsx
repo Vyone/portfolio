@@ -114,7 +114,7 @@ export default function About() {
              {/* Arrow Button */}
             <div className="flex justify-center mt-10">
                 <a 
-                  href="#skills" 
+                  href="#project" 
                   className="animate-bounce p-3 rounded-full  text-white  transition"
                 >
                     <FiArrowDown className="w-6 h-6" />
