@@ -86,7 +86,7 @@ export default function Experience() {
             <div
               key={index}
               className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start text-left 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-6 h-auto" data-aos="zoom-in"
               data-aos-delay={index * 100}

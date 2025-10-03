@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
-import profilePic from '../assets/profilee.jpeg';
-import { FiDownload, FiMail, FiArrowDown } from 'react-icons/fi';
+import profilePic from '../assets/profile.jpeg';
+import { FiDownload, FiMail} from 'react-icons/fi';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Hero() {
@@ -44,23 +44,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* <a
-              href="/portfolio/CV-VyoneLouis.pdf"
-              download="CV-VyoneLouis.pdf"
-              className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 mx-auto md:mx-0 flex items-center justify-center gap-2"
-            >
-              <FiDownload className="w-4 h-4" />
-              Download CV
-            </a>
-            <a
-              href="/portfolio/CV-VyoneLouis.pdf"
-              download="CV-VyoneLouis.pdf"
-              className="text-xs bg-blue-900/40 hover:bg-blue-900/70 px-3 py-1 rounded-full text-blue-100 border border-blue-700 w-40 h-10 mx-auto md:mx-0 flex items-center justify-center gap-2"
-            >
-              <FiDownload className="w-4 h-4" />
-              Download Portfolio
-            </a> */}
-
             <div className="justify-center md:justify-start flex gap-6 text-gray-400 text-3xl mt-6">
               <a href="mailto:vyone.louis@binus.ac.id"><FiMail /></a>
               <a href="https://linkedin.com/in/vyonelouis"><FaLinkedin /></a>
@@ -69,11 +52,18 @@ export default function Hero() {
           </div>
 
           {/* Right Column */}
-          <div className="order-1 md:order-2 flex-1 flex justify-start md:justify-center items-center mt-10 md:mt-0 md:pl-10">
+          {/* <div className="order-1 md:order-2 flex-1 flex justify-start md:justify-center items-center mt-10 md:mt-0 md:pl-10">
             <img
               src={profilePic}
               alt="Profile"
               className="w-50 h-50 md:w-100 md:h-100 rounded-full object-cover border-3 border-blue-100"
+            />
+          </div> */}
+          <div className="order-1 md:order-2 flex-1 flex justify-center md:justify-end items-start md:pl-10">
+            <img
+              src={profilePic}
+              alt="Profile"
+              className="w-50 h-50 md:w-120 md:h-120 rounded-full object-cover border-5 border-blue-100"
             />
           </div>
         </div>

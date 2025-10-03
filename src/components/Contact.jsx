@@ -20,7 +20,7 @@ export default function Contact() {
                 <a
                     href="mailto:vyone.louis@binus.ac.id"
                     className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-               transform transition-all duration-500 ease-in-out 
+               transform transition-all duration-150 ease-in-out 
                hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
                hover:shadow-xl p-8"
                     data-aos="zoom-in"
@@ -36,7 +36,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-               transform transition-all duration-500 ease-in-out 
+               transform transition-all duration-150 ease-in-out 
                hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
                hover:shadow-xl p-8"
                     data-aos="zoom-in"
@@ -52,7 +52,7 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-               transform transition-all duration-500 ease-in-out 
+               transform transition-all duration-150 ease-in-out 
                hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
                hover:shadow-xl p-8"
                     data-aos="zoom-in"
@@ -64,7 +64,7 @@ export default function Contact() {
             </div>
 
             {/* Arrow Button */}
-            <div className="flex justify-center mt-2 md:mt-50">
+            <div className="flex justify-center mt-10 md:mt-50">
                 <a
                     href="#home"
                     className="animate-bounce p-3 rounded-full  text-white  transition"

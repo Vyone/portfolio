@@ -28,7 +28,7 @@ export default function About() {
             {/* Card */}
             <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-blue-400
              p-8 h-48" data-aos="zoom-in">
@@ -40,7 +40,7 @@ export default function About() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-blue-400
              p-8 h-48" data-aos="zoom-in">
@@ -52,7 +52,7 @@ export default function About() {
                 </div>
 
                 {/* <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gray-600 hover:shadow-xl hover:ring-1 hover:ring-blue-400 hover:ring-offset-1 
              p-8 h-48" data-aos="zoom-in">
                     <FaProjectDiagram className="text-4xl text-blue-300 mb-2" />
@@ -63,7 +63,7 @@ export default function About() {
                 </div> */}
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-blue-400
              p-8 h-48" data-aos="zoom-in">
@@ -75,7 +75,7 @@ export default function About() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-blue-400
              p-8 h-48" data-aos="zoom-in">
@@ -87,7 +87,7 @@ export default function About() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-blue-400
              p-8 h-48" data-aos="zoom-in">
@@ -99,7 +99,7 @@ export default function About() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transition-all duration-500 ease-in-out 
+             transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-blue-400
              p-8 h-48" data-aos="zoom-in">

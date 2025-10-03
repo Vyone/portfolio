@@ -20,7 +20,7 @@ export default function Skills() {
             {/* Card */}
             <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <SiC className="text-4xl text-blue-300 mb-2" />
@@ -29,7 +29,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <SiHtml5 className="text-4xl text-blue-300 mb-1" />
@@ -39,7 +39,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <SiJavascript className="text-4xl text-blue-300 mb-2" />
@@ -48,7 +48,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <FaPhp className="text-4xl text-blue-300 mb-2" />
@@ -57,7 +57,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <SiMysql className="text-4xl text-blue-300 mb-2" />
@@ -66,7 +66,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <FaLaravel className="text-4xl text-blue-300 mb-2" />
@@ -75,7 +75,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <FaVuejs className="text-4xl text-blue-300 mb-2" />
@@ -84,7 +84,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <FaReact className="text-4xl text-blue-300 mb-2" />
@@ -93,7 +93,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <FaBootstrap className="text-4xl text-blue-300 mb-2" />
@@ -102,7 +102,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-2 hover:ring-blue-400 hover:ring-offset-2 
              p-8 h-48" data-aos="zoom-in">
@@ -112,7 +112,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-2 hover:ring-blue-400 hover:ring-offset-2 
              p-8 h-48" data-aos="zoom-in">
@@ -122,7 +122,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-2 hover:ring-blue-400 hover:ring-offset-2 
              p-8 h-48" data-aos="zoom-in">
@@ -133,7 +133,7 @@ export default function Skills() {
 
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl hover:ring-2 hover:ring-blue-400 hover:ring-offset-2 
              p-8 h-48" data-aos="zoom-in">
@@ -143,7 +143,7 @@ export default function Skills() {
                 </div>
 
                 <div className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start items-center text-center 
-             transform transition-all duration-500 ease-in-out 
+             transform transition-all duration-150 ease-in-out 
              hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
              hover:shadow-xl p-8 h-48" data-aos="zoom-in">
                     <FaGithub className="text-4xl text-blue-300 mb-2" />

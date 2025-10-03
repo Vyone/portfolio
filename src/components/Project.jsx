@@ -18,9 +18,13 @@ import willifySong from "../assets/project/Willify-SongDetail.png";
 import willifyLR from "../assets/project/Willify-LR.png"; 
 import willifyLogin from "../assets/project/Willify-Login.png";
 import pawpal from "../assets/project/PawPal.png";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import portHero from "../assets/project/porto-hero.png";
+import portProject from "../assets/project/porto-project.png";
+import portExp from "../assets/project/porto-exp.png";
 
 
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const project = [
   {
@@ -29,50 +33,64 @@ const project = [
       "Developed a website where users can browse and select songs, view lyrics and detailed song information, and create personalized accounts through login and registration features using HTML, CSS, and JavaScript. Built with a focus on user experience, and dynamic content display.",
     pictures: [willifyLR, willifyHome, willifyLogin, willifySong],
     skills: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Vyone/Willify",
   },
   {
     name: "Restawrant",
     description:
-      "Developed a food ordering website using Vue.js, where users can browse foods, view recommendations, and add items to their cart with the total price automatically calculated. The project uses a local JSON file (via json-server) as a mock database and API for efficient data management and retrieval. Built while learning from external tutorials and resources, this project helped me practice working with Vue.js, API handling, and creating a smooth, user-friendly experience.",
+      "Developed a food ordering website using Vue.js, where users can browse foods, view recommendations, and add items to their cart with the total price automatically calculated. The project uses a local JSON file (via json-server) as a mock database and API for efficient data management and retrieval.",
     pictures: [restoHome, restoOrder, restoCart],
     skills: ["Vue.js", "Bootstrap", "JSON", "Local API", "JavaScript"],
+    github: "https://github.com/Vyone/Restawrant",
   },
   {
     name: "National English Olympics 2024",
     description:
-      "Contributed to The National English Olympics (https://neo.mybnec.org/), an annual national-level English competition organized by BINUS English Club (BNEC) Alam Sutera, by designing and developing the competition section. The event aims to nurture the talents of high school and college students through various English-based categories",
+      "Contributed to The National English Olympics (https://neo.mybnec.org/), an annual national-level English competition organized by BINUS English Club (BNEC) Alam Sutera, by designing and developing the competition section.",
     pictures: [neoHome, neoComp, neoCompDetail],
     skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Git", "Github", "Figma", "Teamwork"],
+    github: "https://neo.mybnec.org/",
   },
   {
    name: "Faketection",
    description:
-     "Built the frontend for a Deepfake Detection website, integrating an AI model (Python) with a responsive HTML/CSS interface. Enabled users to upload and analyze media files seamlessly, bridging the AI backend with a user-friendly design.",
+     "Built the frontend for a Deepfake Detection website, integrating an AI model (Python) with a responsive HTML/CSS interface.",
    pictures: [fHome, fReal, fFake],
    skills: ["HTML", "CSS", "Python", "AI Integration"],
+   github: "https://github.com/Vyone/Faketection",
  },
   {
     name: "Social Event 2024",
     description:
-      "Coordinated, designed, and developed a Social Event Website with a team using Laravel (PHP) and Blade templating. The platform was built to showcase BNEC Social Event activities, promote community engagement, and support the organization’s mission of creating a positive social impact, while ensuring a responsive and maintainable web application.",
+      "Coordinated, designed, and developed a Social Event Website with a team using Laravel (PHP) and Blade templating.",
     pictures: [seLanding, seAbout, seEvent],
     skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Git", "Github", "Figma", "Teamwork"],
+    github: "",
   },
    {
     name: "SkinVigil",
     description:
-      "Collaborated in a group project to develop a Skin Cancer Detection website, contributing to the design and implementation of the “About Us” section. Focused on building a responsive and user-friendly interface using React to enhance the overall frontend experience.",
+      "Collaborated in a group project to develop a Skin Cancer Detection website, contributing to the design and implementation of the “About Us” section.",
     pictures: [skinHome, skinAbout],
     skills: ["React", "Git", "Github", "Figma", "Teamwork"],
+    github: "https://skin-vigil-frontend.vercel.app/",
   },
-    {
+{
     name: "PawPal",
     description:
-      "Designed a pet tracker mobile app prototype using Figma, featuring care reminders, multi-pet management, a community forum, and clinic recommendations. Focused on creating an intuitive and user-friendly interface through interactive prototyping.",
+      "Designed a pet tracker mobile app prototype using Figma, featuring care reminders, multi-pet management, a community forum, and clinic recommendations.",
     pictures: [pawpal],
     skills: ["Figma", "UI/UX Design", "Prototyping"],
+    github: "",
   },
-  
+   {
+    name: "Portfolio Website",
+    description:
+    "Developed a personal portfolio website using React and Tailwind CSS to create a modern, responsive, and visually appealing interface. The website includes dedicated sections for About Me, Skills, Projects, Experience, and Contact, providing a structured and professional presentation of my background.",
+    pictures: [portHero, portProject, portExp],
+    skills: ["React.js", "Tailwind CSS", "JavaScript", "Git", "Github", "Deployment"],
+    github: "https://github.com/Vyone/portfolio",
+  },
 ];
 
 export default function Project() {
@@ -81,7 +99,7 @@ export default function Project() {
 
   const handleOpen = (proj) => {
     setSelectedProject(proj);
-    setCurrentIndex(0); // start from first image
+    setCurrentIndex(0);
   };
 
   const handleClose = () => {
@@ -108,16 +126,10 @@ export default function Project() {
   };
 
   return (
-    // <section
-    //   id="project"
-    //   className="bg-gray-900 min-h-screen p-8 scroll-mt-30"
-    //   data-aos="fade-up"
-    // >
     <section
       id="project"
       className="bg-gray-900 min-h-screen p-8 scroll-mt-8"
     >
-      {/* Header */}
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold text-blue-200 mb-4 border-b-2 border-blue-300 pb-2 inline-block">
           My Projects
@@ -128,33 +140,49 @@ export default function Project() {
         </p>
       </div>
 
-      {/* Project Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {project.map((exp, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl"
+            className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-150 hover:scale-[1.03] hover:shadow-2xl"
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
-            {/* Image with Blur on Hover */}
             <div className="relative group">
               <img
                 src={exp.pictures[0]}
                 alt={exp.name}
-                className="w-full h-60 object-cover transition duration-500 group-hover:blur-sm"
+                className="w-full h-60 object-cover transition duration-150 group-hover:blur-sm"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
                 <button
                   onClick={() => handleOpen(exp)}
                   className="text-blue-900 text-sm md:text-base font-semibold px-4 py-2 border-2 border-blue-900 rounded-lg bg-white/80 hover:bg-white transition"
                 >
                   View Project
                 </button>
+                {exp.github ? (
+                  <a
+                    href={exp.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-gray-700/80 text-white hover:bg-gray-600 transition"
+                  >
+                    <FaGithub className="text-lg" />
+                    {/* GitHub */}
+                  </a>
+                ) : (
+                  <span className="relative inline-flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-gray-700/50 text-gray-400 cursor-not-allowed">
+                    <FaGithub className="text-lg opacity-50" />
+                    <span className="absolute left-3 w-5 h-[2px] bg-red-400 rotate-45"></span>
+                    {/* Not Available */}
+                  </span>
+
+
+                )}
               </div>
             </div>
 
-            {/* Content */}
             <div className="p-6">
               <h3 className="text-xl font-semibold text-blue-200">
                 {exp.name}
@@ -163,8 +191,7 @@ export default function Project() {
                 {exp.description}
               </p>
 
-              {/* Skills */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {exp.skills.map((skill, i) => (
                   <span
                     key={i}
@@ -179,41 +206,33 @@ export default function Project() {
         ))}
       </div>
 
-      {/* Modal */}
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4"
-          onClick={handleClose} // Close when clicking backdrop
+          onClick={handleClose}
         >
           <div
             className="relative w-full max-w-4xl flex flex-col items-center"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Image */}
             <div className="relative flex items-center justify-center w-full">
               <img
                 src={selectedProject.pictures[currentIndex]}
                 alt={`${selectedProject.name} screenshot`}
                 className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
               />
-
-              {/* Close Button */}
               <button
                 onClick={handleClose}
                 className="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-400"
               >
                 &times;
               </button>
-
-              {/* Left Arrow */}
               <button
                 onClick={prevImage}
                 className="absolute left-2 md:left-6 text-white text-xl p-1 md:text-3xl md:p-2 rounded-full bg-black/40 hover:bg-black/70"
               >
                 &#8249;
               </button>
-
-              {/* Right Arrow */}
               <button
                 onClick={nextImage}
                 className="absolute right-2 md:right-6 text-white text-xl p-1 md:text-3xl md:p-2 rounded-full bg-black/40 hover:bg-black/70"
@@ -221,17 +240,12 @@ export default function Project() {
                 &#8250;
               </button>
             </div>
-
-            {/* Caption */}
             <p className="text-center text-blue-200 mt-4 text-sm md:text-base">
               {currentIndex + 1} / {selectedProject.pictures.length}
             </p>
           </div>
         </div>
       )}
-
-
-
     </section>
   );
 }
