@@ -21,6 +21,11 @@ import pawpal from "../assets/project/PawPal.png";
 import portHero from "../assets/project/porto-hero.png";
 import portProject from "../assets/project/porto-project.png";
 import portExp from "../assets/project/porto-exp.png";
+import w2About from "../assets/project/willify2_about.png";
+import w2Explore from "../assets/project/willify2_explore.png";
+import w2Home from "../assets/project/willify2_home.png";
+import w2Login from "../assets/project/willify2_login.png";
+import w2Song from "../assets/project/willify2_songDet.png";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -32,6 +37,14 @@ const project = [
     pictures: [willifyLR, willifyHome, willifyLogin, willifySong],
     skills: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Vyone/Willify",
+  },
+  {
+    name: "Willify2.0",
+    description:
+      "Developed an updated version of Willify using Laravel and PHP, utilizing Laravel’s MVC architecture and Blade templating to build a dynamic system for browsing songs and displaying detailed lyrics and song information.",
+    pictures: [w2Home, w2Song, w2Explore, w2About, w2Login],
+    skills: ["Laravel", "PHP", "Bootstrap", "MySQL"],
+    github: "https://github.com/Vyone/Willify2",
   },
   {
     name: "Restawrant",
@@ -95,7 +108,7 @@ const project = [
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(null); 
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleOpen = (proj) => {
     setSelectedProject(proj);
@@ -105,7 +118,7 @@ export default function Project() {
   const handleClose = () => {
     setSelectedProject(null);
     setCurrentIndex(0);
-    setActiveIndex(null); 
+    setActiveIndex(null);
   };
 
   const prevImage = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-// Your experiences array
+// Experiences array
 const experiences = [
   {
     role: "Information Technology Manager",
@@ -62,11 +62,6 @@ const experiences = [
 
 export default function Experience() {
   return (
-    // <section
-    //   id="experience"
-    //   className="bg-gray-900 text-white min-h-screen p-8 scroll-mt-30"
-    //   data-aos="fade-up"
-    // >
     <section
       id="experience"
       className="bg-gray-900 text-white min-h-screen p-8 scroll-mt-8"
