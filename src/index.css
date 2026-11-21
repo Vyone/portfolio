@@ -1,29 +1,39 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
 }
 
-html, body {
-  background-color: #111827; 
-}
-
 @keyframes blinkCaret {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .animate-scroll {

@@ -1,7 +1,15 @@
 import React from "react";
+import { FiBriefcase, FiCalendar } from "react-icons/fi";
 
-// Experiences array
 const experiences = [
+  {
+    role: "Application Developer Intern",
+    company: "PT Kalbe Farma Tbk",
+    date: "2025 - Present",
+    description:
+    "Served as part of the application development team across 5 projects, analyzing user requirements and functional/technical specifications, and designing database schemas. Developed full-stack web applications using C# and Blazor (.NET) under a hybrid methodology, wrote unit tests with bUnit and NUnit, performed bug fixing, and deployed applications to development and staging environments via GitLab CI/CD pipelines and OpenShift (OCP).",
+    skills: ["C#", ".NET", "Blazor", "SQL", "bUnit", "NUnit", "GitLab CI/CD", "OpenShift (OCP)", "Database Design"],
+  },
   {
     role: "Information Technology Manager",
     company: "BINUS English Club (BNEC)",
@@ -62,41 +70,51 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="bg-gray-900 text-white min-h-screen p-8 scroll-mt-8"
-    >
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold text-blue-200 mt-5 mb-4 border-b-2 border-blue-300 pb-2 inline-block">
-          Experience
-        </h2>
-        <p className="text-center md:text-lg text-blue-100 mt-5 mb-5">
-          Over the years, I’ve gained valuable experiences through hands-on projects, collaborations, and challenges that pushed me to grow. Each project has been an opportunity to sharpen my skills, explore new ideas, and bring creative solutions to life.
-        </p>
-        
+    <section id="experience" className="py-24 px-6 scroll-mt-16">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">
+            Professional Experience
+          </h2>
+          <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 mt-3 max-w-2xl mx-auto">
+            Over the years, I’ve gained valuable experiences through industry internships, hands-on projects, and organizational leadership.
+          </p>
+        </div>
 
-        {/* Grid for experience cards */}
-        <div className="grid grid-cols-1 gap-5">
+        <div className="space-y-5">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-gray-700 rounded-xl shadow-md flex flex-col justify-start text-left 
-             transition-all duration-150 ease-in-out 
-             hover:bg-gradient-to-r hover:from-gray-700 hover:via-blue-700 hover:to-gray-600 
-             hover:shadow-xl p-6 h-auto" data-aos="zoom-in"
-              data-aos-delay={index * 100}
+              className="bg-neutral-50 dark:bg-[#111111] border border-neutral-200 dark:border-neutral-800 rounded-xl p-6 text-left"
+              data-aos="zoom-in"
+              data-aos-delay={index * 80}
             >
-              <h3 className="text-lg font-semibold text-blue-200">{exp.role}</h3>
-              <p className="text-sm text-blue-100 mt-1 mb-2">{exp.company}</p>
-              <p className="text-sm text-blue-100 mt-1 mb-2">{exp.description}</p>
-              <p className="text-xs text-blue-300 mb-2">{exp.date}</p>
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+                <div>
+                  <h3 className="flex items-center gap-2 text-base font-semibold text-neutral-900 dark:text-white">
+                    <FiBriefcase className="w-4 h-4 text-neutral-500 dark:text-neutral-400 shrink-0" />
+                    {exp.role}
+                  </h3>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-0.5">
+                    {exp.company}
+                  </p>
+                </div>
 
-              {/* Skills */}
-              <div className="flex flex-wrap justify-start gap-2 mt-1">
-                {exp.skills.map((skill, i) => (
+                <span className="flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400 shrink-0">
+                  <FiCalendar className="w-3.5 h-3.5" />
+                  {exp.date}
+                </span>
+              </div>
+
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                {exp.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {exp.skills.map((skill) => (
                   <span
-                    key={i}
-                    className="text-xs bg-blue-900/40 px-3 py-1 rounded-full text-blue-100 border border-blue-700"
+                    key={skill}
+                    className="text-xs px-2.5 py-1 rounded-md bg-neutral-200/70 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
                   >
                     {skill}
                   </span>

@@ -28,6 +28,7 @@ import w2Login from "../assets/project/willify2_login.png";
 import w2Song from "../assets/project/willify2_songDet.png";
 
 import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 const project = [
   {
@@ -108,7 +109,6 @@ const project = [
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleOpen = (proj) => {
     setSelectedProject(proj);
@@ -118,7 +118,6 @@ export default function Project() {
   const handleClose = () => {
     setSelectedProject(null);
     setCurrentIndex(0);
-    setActiveIndex(null);
   };
 
   const prevImage = () => {
@@ -133,149 +132,126 @@ export default function Project() {
 
   const nextImage = () => {
     if (selectedProject) {
-      setCurrentIndex(
-        (prev) => (prev + 1) % selectedProject.pictures.length
-      );
+      setCurrentIndex((prev) => (prev + 1) % selectedProject.pictures.length);
     }
   };
 
   return (
-    <section
-      id="project"
-      className="bg-gray-900 min-h-screen p-8 scroll-mt-8"
-    >
-      <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-blue-200 mb-4 border-b-2 border-blue-300 pb-2 inline-block">
-          My Projects
-        </h2>
-        <p className="text-center md:text-lg mt-5 text-blue-100 max-w-3xl mx-auto">
-          A showcase of my projects, demonstrating my skills in web development,
-          software engineering, and database management.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        {project.map((exp, index) => (
-          <div
-            key={index}
-            className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-150"
-            data-aos="zoom-in"
-            data-aos-delay={index * 100}
-          >
-            <div
-              className="relative group cursor-pointer"
-              onClick={() => {
-                // On mobile: tap to activate overlay
-                setActiveIndex(activeIndex === index ? null : index);
-              }}
-            >
-              <img
-                src={exp.pictures[0]}
-                alt={exp.name}
-                className={`w-full h-60 object-cover transition duration-150 
-                  ${activeIndex === index ? "blur-sm md:blur-none" : ""} 
-                  md:group-hover:blur-sm`}
-              />
-
-              <div
-                className={`absolute inset-0 flex items-center justify-center gap-4 transition 
-                  md:opacity-0 md:group-hover:opacity-100
-                  ${activeIndex === index ? "opacity-100" : "opacity-0"}`}
-              >
-                <div className="flex gap-3 items-center">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleOpen(exp);
-                    }}
-                    className="text-blue-900 text-sm md:text-base font-semibold px-4 py-2 border-2 border-blue-900 rounded-lg bg-white/30 hover:bg-blue-200 transition"
-                  >
-                    View Project
-                  </button>
-
-                  {exp.github ? (
-                    <a
-                      href={exp.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex items-center justify-center h-[42px] w-[42px] rounded-full bg-gray-700/80 text-white hover:bg-blue-900 transition"
-                    >
-                      <FaGithub className="text-lg" />
-                    </a>
-                  ) : (
-                    <span className="relative flex items-center justify-center h-[42px] w-[42px] rounded-full bg-gray-700/50 text-gray-400 cursor-not-allowed">
-                      <FaGithub className="text-lg opacity-50" />
-                      <span className="absolute w-5 h-[2px] bg-red-400 rotate-45"></span>
-                    </span>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-blue-200">
-                {exp.name}
-              </h3>
-              <p className="text-sm text-blue-100 mt-2 mb-4 leading-relaxed">
-                {exp.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {exp.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="text-xs bg-blue-900/40 px-3 py-1 rounded-full text-blue-100 border border-blue-700"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {selectedProject && (
-        <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4"
-          onClick={handleClose}
-        >
-          <div
-            className="relative w-full max-w-4xl flex flex-col items-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="relative flex items-center justify-center w-full">
-              <img
-                src={selectedProject.pictures[currentIndex]}
-                alt={`${selectedProject.name} screenshot`}
-                className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
-              />
-              <button
-                onClick={handleClose}
-                className="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-400"
-              >
-                &times;
-              </button>
-              <button
-                onClick={prevImage}
-                className="absolute left-2 md:left-6 text-white text-xl p-1 md:text-3xl md:p-2 rounded-full bg-black/40 hover:bg-black/70"
-              >
-                &#8249;
-              </button>
-              <button
-                onClick={nextImage}
-                className="absolute right-2 md:right-6 text-white text-xl p-1 md:text-3xl md:p-2 rounded-full bg-black/40 hover:bg-black/70"
-              >
-                &#8250;
-              </button>
-            </div>
-            <p className="text-center text-blue-200 mt-4 text-sm md:text-base">
-              {currentIndex + 1} / {selectedProject.pictures.length}
+      <section id="project" className="py-24 px-6 scroll-mt-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">
+              Featured Projects
+            </h2>
+            <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 mt-3 max-w-2xl mx-auto">
+              A showcase of my projects, demonstrating my skills in web development, software engineering, and UI/UX design.
             </p>
           </div>
-        </div>
-      )}
-    </section>
-  );
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {project.map((exp, index) => (
+                    <div
+                      key={exp.name}
+                      className="bg-neutral-50 dark:bg-[#111111] border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col"
+                      data-aos="zoom-in"
+                      data-aos-delay={index * 80}
+                    >
+                      <img
+                        src={exp.pictures[0]}
+                        alt={exp.name}
+                        onClick={() => handleOpen(exp)}
+                        className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition"
+                      />
+
+                          <div className="p-5 flex-1 flex flex-col justify-between">
+                            <div>
+                              <h3 className="text-base font-semibold text-neutral-900 dark:text-white">
+                                {exp.name}
+                              </h3>
+                              <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-2 mb-4 leading-relaxed">
+                                {exp.description}
+                              </p>
+                            </div>
+
+                <div>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {exp.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="text-xs px-2 py-0.5 rounded bg-neutral-200/70 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    {exp.github && (
+                      <a
+                        href={exp.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition"
+                      >
+                        <FaGithub className="w-3.5 h-3.5" />
+                        Code
+                      </a>
+                    )}
+                    <button
+                      onClick={() => handleOpen(exp)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90 transition"
+                    >
+                      <FiExternalLink className="w-3.5 h-3.5" />
+                      Preview
+                    </button>
+                  </div>
+                </div>
+                        </div>
+                      </div>
+          ))}
+                </div>
+              </div>
+
+      { selectedProject && (
+                <div
+                  className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4"
+                  onClick={handleClose}
+                >
+                  <div
+                    className="relative w-full max-w-4xl flex flex-col items-center"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="relative flex items-center justify-center w-full">
+                      <img
+                        src={selectedProject.pictures[currentIndex]}
+                        alt={`${selectedProject.name} screenshot`}
+                        className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+                      />
+                      <button
+                        onClick={handleClose}
+                        className="absolute top-3 right-3 text-white text-3xl font-bold hover:text-neutral-300"
+                      >
+                        &times;
+                      </button>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-2 md:left-6 text-white text-xl p-1 md:text-3xl md:p-2 rounded-full bg-black/40 hover:bg-black/70"
+                      >
+                        &#8249;
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-2 md:right-6 text-white text-xl p-1 md:text-3xl md:p-2 rounded-full bg-black/40 hover:bg-black/70"
+                      >
+                        &#8250;
+                      </button>
+                    </div>
+                      <p className="text-center text-neutral-300 mt-4 text-sm md:text-base">
+                        {currentIndex + 1} / {selectedProject.pictures.length}
+                      </p>
+                  </div>
+                </div>
+              )}
+          </section>
+          );
 }
