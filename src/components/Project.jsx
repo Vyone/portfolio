@@ -86,7 +86,7 @@ const project = [
   {
     name: "SkinVigil",
     description:
-      "Collaborated in a group project to develop a Skin Cancer Detection website, contributing  to the design and implementation of the “About Us” section. Focused on building a responsive and user-friendly interface using React to enhance the overall frontend experience.",
+      "Collaborated in a group project to develop a Skin Cancer Detection website. Focused on building a responsive and user-friendly interface using React to enhance the overall frontend experience.",
     pictures: [skinHome, skinAbout],
     skills: ["React", "Git", "Github", "Figma", "Teamwork"],
     github: "https://skin-vigil-frontend.vercel.app/",
@@ -109,7 +109,7 @@ const project = [
   },
   {
     name: "QShield",
-    description: "Built for HackNusa 2026 (Top 10 National Finalist), Q-Shield is an inline, low-latency verification middleware that prevents QRIS 'sticker-swap' fraud before PIN entry by adding spatial consensus and behavioral verification to static QR displays without requiring merchant hardware upgrades.",
+    description: "Built for HackNusa 2026 (Top 10 National Finalist), an inline and low-latency verification middleware that prevents QRIS 'sticker-swap' fraud before PIN entry without requiring merchant hardware upgrades.",
     pictures: [qshield, qshieldQR, qshieldFake, qshieldReal],
     skills: ["Python", "Next.js", "Hackathon"],
     github: "https://github.com/wcksnrdn/QShield",

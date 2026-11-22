@@ -3,11 +3,11 @@ import { FiBriefcase, FiCalendar } from "react-icons/fi";
 
 const experiences = [
   {
-    role: "Application Developer Intern",
+    role: "Fullstack Developer Intern",
     company: "PT Kalbe Farma Tbk",
     date: "2025 - Present",
     description:
-    "Served as part of the application development team across 5 projects, analyzing user requirements and functional/technical specifications, and designing database schemas. Developed full-stack web applications using C# and Blazor (.NET) under a hybrid methodology, wrote unit tests with bUnit and NUnit, performed bug fixing, and deployed applications to development and staging environments via GitLab CI/CD pipelines and OpenShift (OCP).",
+      "Served as part of the application development team across 5 projects, analyzing user requirements and functional/technical specifications, and designing database schemas. Developed full-stack web applications using C# and Blazor (.NET) under a hybrid methodology, wrote unit tests with bUnit and NUnit, performed bug fixing, and deployed applications to development and staging environments via GitLab CI/CD pipelines and OpenShift (OCP).",
     skills: ["C#", ".NET", "Blazor", "SQL", "bUnit", "NUnit", "GitLab CI/CD", "OpenShift (OCP)", "Database Design"],
   },
   {
