@@ -26,6 +26,10 @@ import w2Explore from "../assets/project/willify2_explore.png";
 import w2Home from "../assets/project/willify2_home.png";
 import w2Login from "../assets/project/willify2_login.png";
 import w2Song from "../assets/project/willify2_songDet.png";
+import qshieldFake from "../assets/project/QShieldFakeQR.png";
+import qshieldReal from "../assets/project/QShieldRealQR.png";
+import qshieldQR from "../assets/project/QShieldScanQR.png";
+import qshield from "../assets/project/QShield.png";
 
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -103,6 +107,13 @@ const project = [
     skills: ["React.js", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Vyone/portfolio",
   },
+  {
+    name: "QShield",
+    description: "Built for HackNusa 2026 (Top 10 National Finalist), Q-Shield is an inline, low-latency verification middleware that prevents QRIS 'sticker-swap' fraud before PIN entry by adding spatial consensus and behavioral verification to static QR displays without requiring merchant hardware upgrades.",
+    pictures: [qshield, qshieldQR, qshieldFake, qshieldReal],
+    skills: ["Python", "Next.js", "Hackathon"],
+    github: "https://github.com/wcksnrdn/QShield",
+  }
 ];
 
 export default function Project() {
