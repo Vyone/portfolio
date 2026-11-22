@@ -13,7 +13,7 @@ html {
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 @keyframes scroll {
@@ -42,4 +42,17 @@ body {
 
 .animate-scroll-reverse {
   animation: scroll-reverse 30s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
